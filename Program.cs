@@ -31,7 +31,7 @@ var keyVaultPrefix = builder.Configuration["AppConfiguration:KeyVaultPrefix"];
 if (string.IsNullOrWhiteSpace(keyVaultPrefix))
 {
     throw new ArgumentNullException("KeyVaultPrefix", "KeyVaultPrefix is not set in the configuration.");
-}
+}//
 builder.Configuration.AddAzureKeyVault(
     keyVaultURI,
     new DefaultAzureCredential(),
